@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { UserButton } from '@clerk/astro/components';
+
+// ✅ Obtener userId correctamente
+const auth = Astro.locals.auth;
+let userId = null;
+
+if (auth) {
+  const authResult = await auth();
+  userId = authResult.userId;
+}
+
+// Si no hay usuario, redirigir (por seguridad)
+if (!userId) {
+  return Astro.redirect('/login');
+}
+---
+
+<!-- El resto del HTML igual -->

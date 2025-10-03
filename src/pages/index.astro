@@ -1,16 +1,119 @@
 ---
+import Layout from '../layouts/Layout.astro';
+import { UserButton } from '@clerk/astro/components';
 
+// ✅ Forma simple y directa
+let userId = null;
+try {
+  if (Astro.locals.auth) {
+    const authData = await Astro.locals.auth();
+    userId = authData?.userId;
+  }
+} catch (e) {
+  // Si falla, userId queda null
+}
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Selectivitat AI - Corrige tus exámenes con IA">
+  <!-- Header -->
+  <header class="fixed top-0 w-full bg-white/80 backdrop-blur-sm border-b border-gray-200 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center">
+          <span class="text-2xl font-bold text-blue-600">Selectivitat AI</span>
+        </div>
+        <div class="flex items-center gap-4">
+          {userId ? (
+            <>
+              <a href="/corregir" class="text-gray-600 hover:text-gray-900 font-medium">
+                Corregir
+              </a>
+              <UserButton />
+            </>
+          ) : (
+            <>
+              <a href="/login" class="text-gray-600 hover:text-gray-900 font-medium">
+                Iniciar sesión
+              </a>
+              <a href="/registro" class="bg-blue-600 hover:bg-blue-700 text-white font-medium px-4 py-2 rounded-lg transition-colors">
+                Registrarse
+              </a>
+            </>
+          )}
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="pt-16">
+    <div class="min-h-screen flex items-center justify-center px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <!-- Título Principal -->
+        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
+          Corrige tus exámenes de 
+          <span class="text-blue-600">Selectividad</span> 
+          con IA
+        </h1>
+        
+        <!-- Subtítulo -->
+        <p class="text-xl sm:text-2xl text-gray-600 mb-12 max-w-2xl mx-auto">
+          Sube tu examen y recibe tu nota y feedback detallado al instante
+        </p>
+        
+        <!-- CTA Button -->
+        <a 
+          href="/corregir" 
+          class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold text-lg px-8 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200 transform hover:-translate-y-1"
+        >
+          Probar corrección →
+        </a>
+      </div>
+    </div>
+
+    <!-- Cómo Funciona -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-16">
+          Cómo funciona
+        </h2>
+        
+        <div class="grid md:grid-cols-3 gap-12">
+          <!-- Paso 1 -->
+          <div class="text-center">
+            <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+              1
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Sube tu examen</h3>
+            <p class="text-gray-600">Arrastra o selecciona tu archivo PDF o imagen del examen</p>
+          </div>
+          
+          <!-- Paso 2 -->
+          <div class="text-center">
+            <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+              2
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Procesamos con IA</h3>
+            <p class="text-gray-600">Nuestra IA analiza cada pregunta y respuesta en segundos</p>
+          </div>
+          
+          <!-- Paso 3 -->
+          <div class="text-center">
+            <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+              3
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Recibe tu nota</h3>
+            <p class="text-gray-600">Obtén tu calificación y feedback detallado para mejorar</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-50 border-t border-gray-200 py-8">
+    <div class="max-w-7xl mx-auto px-4 text-center text-gray-600">
+    <p>&copy; 2025 Selectivitat AI. Hecho con ❤️ para estudiantes.</p>
+    </div>
+  </footer>
+</Layout>
