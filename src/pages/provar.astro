@@ -1,0 +1,247 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Prova la correcció - Selectivitat AI">
+  <main class="min-h-screen bg-gradient-to-b from-blue-50 to-white py-16">
+    <div class="max-w-5xl mx-auto px-6">
+      <!-- Encabezado -->
+      <div class="text-center mb-12">
+        <h1 class="text-5xl font-bold text-gray-900 mb-4">
+          Prova la <span class="text-blue-600">correcció gratuïta</span>
+        </h1>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Experimenta la potència de la nostra IA sense compromís. Puja una foto
+          del teu examen i veuràs com funciona!
+        </p>
+      </div>
+
+      <!-- Demo de corrección -->
+      <div class="bg-white rounded-2xl shadow-lg p-10 mb-12">
+        <div class="grid md:grid-cols-2 gap-8 mb-8">
+          <!-- Sección de subida -->
+          <div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">
+              1. Puja el teu examen
+            </h3>
+            <div
+              class="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-blue-500 transition cursor-pointer"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-16 w-16 mx-auto text-gray-400 mb-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
+                ></path>
+              </svg>
+              <p class="text-gray-600 mb-2">Clica aquí o arrossega la imatge</p>
+              <p class="text-sm text-gray-500">PNG, JPG o PDF (màx. 10MB)</p>
+              <input type="file" class="hidden" accept="image/*,.pdf" />
+            </div>
+
+            <div class="mt-6 bg-blue-50 rounded-lg p-4">
+              <h4 class="font-semibold text-blue-900 mb-2">
+                💡 Consells per a una millor correcció:
+              </h4>
+              <ul class="text-sm text-blue-800 space-y-1">
+                <li>✓ Assegura't que la lletra sigui llegible</li>
+                <li>✓ Evita ombres o reflexos</li>
+                <li>✓ Centra bé l'examen en la foto</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Sección de resultado demo -->
+          <div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">
+              2. Obté el resultat instantani
+            </h3>
+            <div
+              class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 border border-green-200"
+            >
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-sm font-semibold text-green-800"
+                  >CORRECCIÓ COMPLETADA</span
+                >
+                <span class="text-2xl font-bold text-green-700">8.5/10</span>
+              </div>
+
+              <div class="space-y-3 mb-4">
+                <div class="bg-white rounded-lg p-3">
+                  <div class="flex items-start gap-2">
+                    <span class="text-green-500 font-bold">✓</span>
+                    <div class="flex-1">
+                      <p class="text-sm font-semibold text-gray-900">
+                        Pregunta 1
+                      </p>
+                      <p class="text-xs text-gray-600">
+                        Excel·lent resposta, conceptes clars
+                      </p>
+                    </div>
+                    <span class="text-sm font-bold text-green-700">2.5/2.5</span
+                    >
+                  </div>
+                </div>
+
+                <div class="bg-white rounded-lg p-3">
+                  <div class="flex items-start gap-2">
+                    <span class="text-yellow-500 font-bold">⚠</span>
+                    <div class="flex-1">
+                      <p class="text-sm font-semibold text-gray-900">
+                        Pregunta 2
+                      </p>
+                      <p class="text-xs text-gray-600">
+                        Falta desenvolupar més l'argument
+                      </p>
+                    </div>
+                    <span class="text-sm font-bold text-yellow-700"
+                      >1.5/2.5</span
+                    >
+                  </div>
+                </div>
+
+                <div class="bg-white rounded-lg p-3">
+                  <div class="flex items-start gap-2">
+                    <span class="text-green-500 font-bold">✓</span>
+                    <div class="flex-1">
+                      <p class="text-sm font-semibold text-gray-900">
+                        Pregunta 3
+                      </p>
+                      <p class="text-xs text-gray-600">
+                        Resposta completa i ben justificada
+                      </p>
+                    </div>
+                    <span class="text-sm font-bold text-green-700">5/5</span>
+                  </div>
+                </div>
+              </div>
+
+              <button
+                class="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 rounded-lg transition"
+              >
+                Veure informe complet
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <button
+            class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition shadow-lg"
+          >
+            Començar correcció gratuïta
+          </button>
+        </div>
+      </div>
+
+      <!-- Características -->
+      <div class="grid md:grid-cols-3 gap-8 mb-12">
+        <div class="text-center">
+          <div
+            class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8 text-blue-600"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">Resultats en segons</h3>
+          <p class="text-gray-600 text-sm">
+            La nostra IA processa i corregeix el teu examen instantàniament
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div
+            class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8 text-green-600"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">Feedback detallat</h3>
+          <p class="text-gray-600 text-sm">
+            Expliquem cada punt fort i àrea de millora de forma clara
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div
+            class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8 text-yellow-600"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">Totalment segur</h3>
+          <p class="text-gray-600 text-sm">
+            Les teves dades estan protegides i encriptades
+          </p>
+        </div>
+      </div>
+
+      <!-- CTA Final -->
+      <div
+        class="bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-10 text-white text-center"
+      >
+        <h2 class="text-3xl font-bold mb-4">
+          Preparat per millorar la teva nota?
+        </h2>
+        <p class="text-lg mb-6 text-blue-100">
+          Registra't ara i obté accés il·limitat a correccions instantànies
+        </p>
+        <div class="flex gap-4 justify-center">
+          <a
+            href="/register"
+            class="bg-white text-blue-600 hover:bg-blue-50 font-bold py-3 px-8 rounded-lg transition"
+          >
+            Comença ara
+          </a>
+          <a
+            href="/resultats"
+            class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-3 px-8 rounded-lg transition"
+          >
+            Veure resultats
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>

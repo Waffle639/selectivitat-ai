@@ -1,0 +1,69 @@
+---
+import { UserButton } from "@clerk/astro/components";
+
+let userId = null;
+try {
+  if (Astro.locals.auth) {
+    const authData = await Astro.locals.auth();
+    userId = authData?.userId;
+  }
+} catch (e) {
+  userId = null;
+}
+---
+
+<header class="bg-blue-600 text-white rounded-2xl mx-auto mt-6 max-w-7xl shadow-lg px-10 py-5 flex justify-between items-center">
+  <!-- LOGO -->
+  <a href="/" class="flex items-center gap-3">
+    <div class="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center shadow-inner">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="w-6 h-6 text-white"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+      </svg>
+    </div>
+    <span class="text-xl font-bold tracking-tight">
+      Selectivitat<span class="text-blue-200">·AI</span>
+    </span>
+  </a>
+
+  <!-- NAVEGACIÓ -->
+  <nav class="hidden md:flex items-center gap-12 text-base font-semibold ml-14">
+    <a href="/" class="hover:text-blue-200 transition-colors">Inici</a>
+    <a href="/provar" class="hover:text-blue-200 transition-colors">Provar correcció</a>
+    <a href="/resultats" class="hover:text-blue-200 transition-colors">Resultats</a>
+    <a href="/equip" class="hover:text-blue-200 transition-colors">Qui som</a>
+    <a href="/contacte" class="hover:text-blue-200 transition-colors">Contacte</a>
+  </nav>
+
+  <!-- BOTONS / CLERK -->
+  <div class="flex items-center gap-5 ml-4">
+    {userId ? (
+      <UserButton
+        afterSignOutUrl="/"
+        appearance={{
+          elements: { avatarBox: "w-10 h-10" },
+        }}
+      />
+    ) : (
+      <>
+        <a
+          href="/login"
+          class="bg-blue-500 hover:bg-blue-700 text-white text-sm font-semibold px-5 py-2 rounded-lg transition-all duration-200"
+        >
+          Inicia sessió
+        </a>
+        <a
+          href="/register"
+          class="bg-yellow-400 hover:bg-yellow-300 text-blue-900 text-sm font-semibold px-5 py-2 rounded-lg transition-all duration-200"
+        >
+          Registra’t
+        </a>
+      </>
+    )}
+  </div>
+</header>

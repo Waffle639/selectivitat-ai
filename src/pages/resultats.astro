@@ -1,0 +1,224 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Resultats - Selectivitat AI">
+  <main class="min-h-screen bg-gradient-to-b from-blue-50 to-white py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <!-- Encabezado -->
+      <div class="text-center mb-16">
+        <h1 class="text-5xl font-bold text-gray-900 mb-4">
+          <span class="text-blue-600">Resultats</span> comprovats
+        </h1>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Els estudiants que utilitzen Selectivitat·AI obtenen millors resultats. 
+          Les dades parlen per si soles.
+        </p>
+      </div>
+
+      <!-- Estadísticas principales -->
+      <div class="grid md:grid-cols-3 gap-8 mb-16">
+        <div class="bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl p-8 text-white text-center shadow-xl">
+          <div class="text-5xl font-bold mb-2">+1.8</div>
+          <div class="text-xl font-semibold mb-2">Punts de millora</div>
+          <p class="text-blue-100 text-sm">Increment mitjà en la nota final</p>
+        </div>
+
+        <div class="bg-gradient-to-br from-green-500 to-green-600 rounded-2xl p-8 text-white text-center shadow-xl">
+          <div class="text-5xl font-bold mb-2">92%</div>
+          <div class="text-xl font-semibold mb-2">Aprovats</div>
+          <p class="text-green-100 text-sm">Dels usuaris superen la selectivitat</p>
+        </div>
+
+        <div class="bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-2xl p-8 text-white text-center shadow-xl">
+          <div class="text-5xl font-bold mb-2">65%</div>
+          <div class="text-xl font-semibold mb-2">Més ràpid</div>
+          <p class="text-yellow-100 text-sm">Temps de preparació reduït</p>
+        </div>
+      </div>
+
+      <!-- Comparativa con/sin IA -->
+      <div class="bg-white rounded-2xl shadow-lg p-10 mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">
+          Comparativa: Amb vs Sense IA
+        </h2>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Sin IA -->
+          <div class="border-2 border-gray-200 rounded-xl p-6">
+            <h3 class="text-xl font-bold text-gray-700 mb-4 text-center">
+              Preparació tradicional
+            </h3>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3">
+                <span class="text-red-500 text-xl">✗</span>
+                <span class="text-gray-700">Correccions lentes (dies d'espera)</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-red-500 text-xl">✗</span>
+                <span class="text-gray-700">Feedback genèric i limitat</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-red-500 text-xl">✗</span>
+                <span class="text-gray-700">Dificultat per identificar errors recurrents</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-red-500 text-xl">✗</span>
+                <span class="text-gray-700">Cost elevat de classes particulars</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-red-500 text-xl">✗</span>
+                <span class="text-gray-700">Nota mitjana: 6.2/10</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Con IA -->
+          <div class="border-2 border-blue-500 rounded-xl p-6 bg-blue-50">
+            <h3 class="text-xl font-bold text-blue-700 mb-4 text-center">
+              Amb Selectivitat·AI
+            </h3>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3">
+                <span class="text-green-500 text-xl">✓</span>
+                <span class="text-gray-700">Correccions instantànies (segons)</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-green-500 text-xl">✓</span>
+                <span class="text-gray-700">Feedback detallat i personalitzat</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-green-500 text-xl">✓</span>
+                <span class="text-gray-700">Anàlisi automàtica de patrons d'error</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-green-500 text-xl">✓</span>
+                <span class="text-gray-700">Accés il·limitat per un preu accessible</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-green-500 text-xl">✓</span>
+                <span class="text-gray-700 font-bold">Nota mitjana: 8.0/10</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gráfico de progreso -->
+      <div class="bg-white rounded-2xl shadow-lg p-10 mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">
+          Evolució de la nota mitjana
+        </h2>
+        
+        <div class="relative h-64 mb-6">
+          <!-- Eje Y -->
+          <div class="absolute left-0 top-0 h-full flex flex-col justify-between text-sm text-gray-600">
+            <span>10</span>
+            <span>8</span>
+            <span>6</span>
+            <span>4</span>
+            <span>2</span>
+            <span>0</span>
+          </div>
+          
+          <!-- Líneas del gráfico -->
+          <div class="ml-8 h-full relative">
+            <!-- Grid horizontal -->
+            <div class="absolute w-full h-full">
+              <div class="h-1/5 border-b border-gray-200"></div>
+              <div class="h-1/5 border-b border-gray-200"></div>
+              <div class="h-1/5 border-b border-gray-200"></div>
+              <div class="h-1/5 border-b border-gray-200"></div>
+              <div class="h-1/5 border-b border-gray-200"></div>
+            </div>
+            
+            <!-- Línea de progreso tradicional -->
+            <svg class="absolute w-full h-full" viewBox="0 0 400 100" preserveAspectRatio="none">
+              <polyline
+                points="0,60 100,58 200,56 300,55 400,54"
+                fill="none"
+                stroke="#9CA3AF"
+                stroke-width="2"
+                stroke-dasharray="5,5"
+              />
+            </svg>
+            
+            <!-- Línea de progreso con IA -->
+            <svg class="absolute w-full h-full" viewBox="0 0 400 100" preserveAspectRatio="none">
+              <polyline
+                points="0,60 100,50 200,35 300,22 400,18"
+                fill="none"
+                stroke="#3B82F6"
+                stroke-width="3"
+              />
+            </svg>
+          </div>
+        </div>
+        
+        <!-- Leyenda -->
+        <div class="flex justify-center gap-8 text-sm">
+          <div class="flex items-center gap-2">
+            <div class="w-4 h-0.5 bg-gray-400 border-dashed"></div>
+            <span class="text-gray-600">Sense IA</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="w-4 h-0.5 bg-blue-600"></div>
+            <span class="text-gray-600">Amb Selectivitat·AI</span>
+          </div>
+        </div>
+        
+        <!-- Eje X -->
+        <div class="flex justify-between mt-4 ml-8 text-sm text-gray-600">
+          <span>Setmana 1</span>
+          <span>Setmana 4</span>
+          <span>Setmana 8</span>
+          <span>Setmana 12</span>
+          <span>Examen</span>
+        </div>
+      </div>
+
+      <!-- Testimonios -->
+      <div>
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">
+          Què diuen els nostres usuaris
+        </h2>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-gradient-to-br from-blue-50 to-white rounded-xl p-6 border border-blue-100">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+                M
+              </div>
+              <div>
+                <div class="font-bold text-gray-900">Maria López</div>
+                <div class="text-sm text-gray-600">Barcelona, 2025</div>
+              </div>
+            </div>
+            <p class="text-gray-700 italic">
+              "Gràcies a Selectivitat·AI vaig millorar la meva nota un 2.5! 
+              El feedback instantani m'ha ajudat a identificar els meus errors ràpidament."
+            </p>
+            <div class="mt-3 text-yellow-500">★★★★★</div>
+          </div>
+
+          <div class="bg-gradient-to-br from-green-50 to-white rounded-xl p-6 border border-green-100">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white font-bold">
+                P
+              </div>
+              <div>
+                <div class="font-bold text-gray-900">Pau Martínez</div>
+                <div class="text-sm text-gray-600">Girona, 2025</div>
+              </div>
+            </div>
+            <p class="text-gray-700 italic">
+              "Impressionant! Vaig passar de suspendre els simulacres a treure un 8.5 a la selectivitat. 
+              La plataforma és molt intuïtiva."
+            </p>
+            <div class="mt-3 text-yellow-500">★★★★★</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>

@@ -1,0 +1,47 @@
+﻿---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Registra't - Selectivitat AI">
+  <main class="min-h-screen flex items-center justify-center bg-gradient-to-b from-blue-50 to-white relative">
+    <!-- Botó per tornar -->
+    <a 
+      href="/" 
+      class="absolute top-6 left-6 flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium transition z-10"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+      </svg>
+      Tornar a l'inici
+    </a>
+    <!-- Formulari de registre -->
+    <div class="bg-white bg-opacity-90 backdrop-blur-md rounded-2xl shadow-lg p-10 w-full max-w-md">
+      <h2 class="text-2xl font-bold mb-6 text-center text-blue-700">Crea el teu compte</h2>
+      <form action="/api/register" method="POST" class="space-y-5">
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700">Correu electrònic</label>
+          <input type="email" name="email" id="email" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" />
+        </div>
+        <div>
+          <label for="password" class="block text-sm font-medium text-gray-700">Contrasenya</label>
+          <input type="password" name="password" id="password" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" />
+        </div>
+        <div>
+          <label for="firstName" class="block text-sm font-medium text-gray-700">Nom</label>
+          <input type="text" name="firstName" id="firstName" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" />
+        </div>
+        <div>
+          <label for="lastName" class="block text-sm font-medium text-gray-700">Cognom</label>
+          <input type="text" name="lastName" id="lastName" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" />
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700">Codi de verificació</label>
+          <input type="text" name="code" id="code" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" />
+        </div>
+        <div class="flex items-center justify-between">
+          <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl">Crear compte</button>
+        </div>
+      </form>
+    </div>
+  </main>
+</Layout>
